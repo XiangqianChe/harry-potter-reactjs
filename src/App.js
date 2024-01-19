@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import CharacterList from './components/CharacterList';
 import CharacterDetail from './components/CharacterDetail';
 

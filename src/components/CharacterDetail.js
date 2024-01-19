@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import characters from '../data/characters';
+import Header from './Header';
 
 function CharacterDetail() {
     const { id } = useParams();
@@ -11,6 +12,7 @@ function CharacterDetail() {
     }
     return (
         <div>
+            <Header />
             <h2>{character.name}</h2>
             <p>{character.description}</p>
             <p>House: {character.house}</p>

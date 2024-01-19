@@ -1,11 +1,12 @@
 import React from 'react';
 import characters from '../data/characters';
 import { Link } from 'react-router-dom'
+import Header from './Header';
 
 function CharacterList(props) {
     return (
         <div>
-            <h2>Harry Potter Characters</h2>
+            <Header />
             <ul>
                 {characters.map((character) => (
                     <li key={character.id}>
