@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchWizards } from '../services/wizardService';
 import CharacterList from '../components/CharacterList';
+import SortingHat from '../components/SortingHat';
 
 const Home = () => {
     const [wizards, setWizards] = useState([]);
@@ -17,8 +18,10 @@ const Home = () => {
 
     return (
         <div>
+            <SortingHat />
             <h1>Wizard Characters</h1>
             <CharacterList wizards={wizards} />
+            <SortingHat />
         </div>
     );
 };

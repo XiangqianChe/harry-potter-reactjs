@@ -1,0 +1,66 @@
+/* SortingHat.css */
+.sorting-hat {
+    width: 150px;
+    height: 150px;
+    background-color: #8b4513;
+    /* Brown, resembling the Sorting Hat */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid #000;
+    /* Black border for the hat */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sorting-hat:hover {
+    background-color: #634527;
+    /* Darker brown on hover */
+}
+
+.sorting {
+    animation: shake 3s ease-in-out;
+    /* Animation for sorting process */
+}
+
+.sorted-gryffindor {
+    background-color: #ae0001;
+    /* Gryffindor color */
+}
+
+.sorted-hufflepuff {
+    background-color: #ecb939;
+    /* Hufflepuff color */
+}
+
+.sorted-ravenclaw {
+    background-color: #0e1a40;
+    /* Ravenclaw color */
+}
+
+.sorted-slytherin {
+    background-color: #1a472a;
+    /* Slytherin color */
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25%,
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
