@@ -1,16 +1,25 @@
-import { Routes, Route } from 'react-router-dom';
-import CharacterList from './components/CharacterList';
-import CharacterDetail from './components/CharacterDetail';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import WizardPage from './pages/WizardPage';
+import { WizardProvider } from './context/WizardContext';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <Routes>
-        <Route path='/' exact element={<CharacterList />} />
-        <Route path='/characters/:id' element={<CharacterDetail />} />
-      </Routes>
-    </div>
+    <Router>
+      <WizardProvider>
+        <div>
+          <Header />
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/characters/:id" element={<WizardPage />} />
+          </Routes>
+        </div>
+      </WizardProvider>
+    </Router>
   );
-}
+};
 
 export default App;
